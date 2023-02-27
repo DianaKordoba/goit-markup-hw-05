@@ -207,7 +207,7 @@ position: relative;
     padding: 16px 32px 16px 32px;
     max-height: 510px;
     margin-top: 48px;
-    transition-property: color;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -379,7 +379,7 @@ position: relative;
     background-color: var(--color-logo);
     border-radius: 50%;
     color: var(--color-page-secondary);
-    transition-property: background-color;
+    transition-property: background-color, border-radius;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -427,7 +427,7 @@ position: relative;
     border-radius: 4px;
     background-color: var(--color-page);
     color: var(--color-svg-logo);
-    transition-property: color;
+    transition-property: color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -650,6 +650,17 @@ position: relative;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.overlay-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-page-secondary);
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    margin-top: 40px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
 .list-app:hover .overlay-app {
     transform: translateY(0%);
 }
@@ -697,9 +708,14 @@ position: relative;
     background-color: var(--color-footer);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
 .modal-close:focus {
     cursor: pointer;
+    background-color: var(--color-button-portfolio);
+    fill: var(--color-page);
 }
